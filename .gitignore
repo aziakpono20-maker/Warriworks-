@@ -1,0 +1,35 @@
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+frontend/.env.local
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Django
+backend/db.sqlite3
+backend/staticfiles/
+backend/media/
+
+# Node.js / Next.js
+node_modules/
+frontend/node_modules/
+frontend/.next/
+
+# Python virtual environments
+venv/
+backend/venv/
+
+# Additional environment files
+.env.*
+!.env.example
+
+# Node dependencies
+node_modules/
+# Local JSON data
+backend/*.json
