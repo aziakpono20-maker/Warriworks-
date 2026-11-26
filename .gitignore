@@ -1,35 +1,39 @@
-
 # Environment variables and secrets
 .env
 .env.*
 !.env.example
 frontend/.env.local
 
-# Python
+# Python virtual environments
 .venv/
 venv/
+backend/venv/
+
+# Python generated files
 __pycache__/
 *.py[cod]
+
+# Python development caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
 # Django
 backend/db.sqlite3
 backend/staticfiles/
 backend/media/
 
-# Node.js / Next.js
+# Node.js and Next.js
 node_modules/
-frontend/node_modules/
 frontend/.next/
 
-# Python virtual environments
-venv/
-backend/venv/
+# Legacy JSON data
+backend/artisans.json
+backend/artisan_accounts.json
+backend/ratings.json
+backend/requests.json
+backend/customer_accounts.json
 
-# Additional environment files
-.env.*
-!.env.example
-
-# Node dependencies
-node_modules/
-# Local JSON data
-backend/*.json
+# Logs and operating-system files
+*.log
+.DS_Store

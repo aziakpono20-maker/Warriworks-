@@ -1,5 +1,261 @@
+
 import Link from 'next/link';
-import { ArrowRight, ArrowUpRight, BadgeCheck, ClipboardList, MessageCircle, ShieldCheck, Wrench, Search, Check } from 'lucide-react';
+import {
+  ArrowRight,
+  ArrowUpRight,
+  BadgeCheck,
+  ClipboardList,
+  MessageCircle,
+  ShieldCheck,
+  Wrench,
+  Search,
+  Check,
+} from 'lucide-react';
 import { SiteHeader } from '@/components/site-header';
-export default function Home(){return <><SiteHeader/><main><section className="shell grid min-h-[610px] items-center gap-12 py-16 lg:grid-cols-[1.02fr_.98fr] lg:py-20"><div className="max-w-[570px]"><div className="eyebrow mb-6 flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-[var(--gold)]"/> Built around Warri. Made for good work.</div><h1 className="text-[clamp(3.1rem,6.5vw,5.7rem)] leading-[.98]">Good work starts with <span className="italic text-[var(--green)]">the right hands.</span></h1><p className="mt-7 max-w-[480px] text-[16px] leading-8 text-[#657066]">Find trusted artisans around Warri. From home repairs to skilled craftsmanship, connect with professionals who get the job done.</p><div className="mt-9 flex flex-wrap gap-3"><Link href="/artisans" className="btn-primary">Find an artisan <ArrowUpRight size={16}/></Link><Link href="/register?role=artisan" className="btn-secondary">Join as an artisan</Link></div><div className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-3 border-t border-[var(--line)] pt-6 text-[12px] font-medium text-[#687268]"><span className="flex items-center gap-2"><BadgeCheck size={16} className="text-[var(--green)]"/> Verified profiles</span><span className="flex items-center gap-2"><ShieldCheck size={16} className="text-[var(--green)]"/> Clear job requests</span><span className="flex items-center gap-2"><MessageCircle size={16} className="text-[var(--green)]"/> Direct communication</span></div></div><div className="relative"><div className="absolute -right-5 -top-6 h-36 w-36 rounded-full border border-[#E6E2D5]"/><div className="relative overflow-hidden rounded-[5px] bg-[#E9E7DC] p-5 sm:p-8"><div className="flex items-center justify-between"><span className="eyebrow">The craft of getting it done</span><span className="text-xs text-[#7A8178]">01 / 03</span></div><div className="mt-6 grid grid-cols-[1fr_.78fr] gap-3"><div className="flex min-h-[310px] flex-col justify-between bg-[var(--forest)] p-5 text-white sm:p-7"><Wrench size={26} strokeWidth={1.3}/><div><p className="font-serif text-3xl leading-tight">Skilled hands.<br/>Solid work.</p><p className="mt-3 text-xs leading-5 text-white/70">A better way to find the people who keep our homes and businesses moving.</p></div></div><div className="flex flex-col gap-3"><div className="flex flex-1 flex-col justify-between bg-[#D7D9C9] p-4"><span className="text-xs font-semibold text-[var(--forest)]">01 — DISCOVER</span><Search size={24} className="text-[var(--forest)]"/><span className="text-sm font-semibold text-[var(--forest)]">Find the right skill.</span></div><div className="flex flex-1 flex-col justify-between bg-[#D8B76E] p-4"><span className="text-xs font-semibold text-[var(--forest)]">02 — CONNECT</span><MessageCircle size={24} className="text-[var(--forest)]"/><span className="text-sm font-semibold text-[var(--forest)]">Get the details clear.</span></div></div></div><div className="mt-3 flex items-center justify-between bg-white px-4 py-3"><span className="text-xs font-semibold text-[var(--forest)]">Local skill. Professional service.</span><ArrowUpRight size={16}/></div></div></div></section><section className="border-y border-[var(--line)] bg-[#F4F3ED] py-16"><div className="shell"><div className="grid gap-8 md:grid-cols-[.8fr_1.2fr]"><div><div className="eyebrow">A more confident connection</div><h2 className="mt-4 max-w-sm text-4xl leading-tight">Good work deserves a better starting point.</h2></div><div className="grid gap-6 sm:grid-cols-2"><Feature icon={<ShieldCheck/>} title="Trust comes first" text="Clear artisan profiles and verification status help customers make informed choices."/><Feature icon={<ClipboardList/>} title="Know what comes next" text="Requests, quotations and approvals follow a clear, structured journey."/><Feature icon={<MessageCircle/>} title="Keep conversations clear" text="Connect directly and discuss the details before work begins."/><Feature icon={<Check/>} title="Built for local work" text="Discover skills and services in Warri and nearby communities."/></div></div></div></section><section id="how-it-works" className="shell py-20"><div className="eyebrow">A straightforward process</div><h2 className="mt-3 max-w-xl text-4xl">From the first search to a job well done.</h2><div className="mt-12 grid gap-8 md:grid-cols-5">{[['01','Find an artisan','Explore skills and local profiles.'],['02','Send a request','Explain what needs to get done.'],['03','Review a quote','Understand the proposed cost and scope.'],['04','Approve the work','Agree on the details before starting.'],['05','Get it done','Follow progress through completion.']].map(([n,t,d])=><div key={n} className="border-t-2 border-[var(--green)] pt-4"><span className="text-xs font-bold text-[var(--gold)]">{n}</span><h3 className="mt-5 text-xl">{t}</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">{d}</p></div>)}</div></section><section id="for-artisans" className="bg-[var(--forest)] py-16 text-white"><div className="shell flex flex-col items-start justify-between gap-8 md:flex-row md:items-center"><div className="max-w-xl"><div className="text-xs font-bold uppercase tracking-[.16em] text-[#D5B86E]">For skilled professionals</div><h2 className="mt-4 text-4xl leading-tight text-white">Let good work open the next door.</h2><p className="mt-4 text-sm leading-7 text-white/70">Build a professional presence, show the work you do and connect with customers looking for your skills.</p></div><Link href="/register?role=artisan" className="inline-flex items-center gap-3 rounded-full bg-white px-6 py-4 text-sm font-semibold text-[var(--forest)]">Create an artisan profile <ArrowRight size={16}/></Link></div></section></main><footer className="shell flex flex-col justify-between gap-3 py-8 text-xs text-[var(--muted)] sm:flex-row"><span>© {new Date().getFullYear()} WarriWorks. Find trusted artisans in Warri.</span><span>Built for good work, close to home.</span></footer></>}
-function Feature({icon,title,text}:{icon:React.ReactNode;title:string;text:string}){return <div className="flex gap-4"><span className="mt-1 text-[var(--green)]">{icon}</span><div><h3 className="text-lg">{title}</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">{text}</p></div></div>}
+
+export default function Home() {
+  return (
+    <>
+      <SiteHeader />
+
+      <main>
+        <section className="shell grid min-h-[610px] items-center gap-12 py-16 lg:grid-cols-[1.02fr_.98fr] lg:py-20">
+          <div className="max-w-[570px]">
+            <div className="eyebrow mb-6 flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-[var(--gold)]" />
+              Built around Warri. Made for good work.
+            </div>
+
+            <h1 className="text-[clamp(3.1rem,6.5vw,5.7rem)] leading-[.98]">
+              Good work starts with{' '}
+              <span className="italic text-[var(--green)]">
+                the right hands.
+              </span>
+            </h1>
+
+            <p className="mt-7 max-w-[480px] text-[16px] leading-8 text-[#657066]">
+              Find trusted artisans around Warri. From home repairs to skilled
+              craftsmanship, connect with professionals who get the job done.
+            </p>
+
+            <div className="mt-9 flex flex-wrap gap-3">
+              <Link href="/artisans" className="btn-primary">
+                Find an artisan <ArrowUpRight size={16} />
+              </Link>
+
+              <Link href="/artisan-register" className="btn-secondary">
+                Join as an artisan
+              </Link>
+
+              <Link
+                href="/customer-register"
+                className="btn-secondary"
+              >
+                Register as a customer
+              </Link>
+            </div>
+
+            <div className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-3 border-t border-[var(--line)] pt-6 text-[12px] font-medium text-[#687268]">
+              <span className="flex items-center gap-2">
+                <BadgeCheck size={16} className="text-[var(--green)]" />
+                Verified profiles
+              </span>
+              <span className="flex items-center gap-2">
+                <ShieldCheck size={16} className="text-[var(--green)]" />
+                Clear job requests
+              </span>
+              <span className="flex items-center gap-2">
+                <MessageCircle size={16} className="text-[var(--green)]" />
+                Direct communication
+              </span>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="absolute -right-5 -top-6 h-36 w-36 rounded-full border border-[#E6E2D5]" />
+
+            <div className="relative overflow-hidden rounded-[5px] bg-[#E9E7DC] p-5 sm:p-8">
+              <div className="flex items-center justify-between">
+                <span className="eyebrow">The craft of getting it done</span>
+                <span className="text-xs text-[#7A8178]">01 / 03</span>
+              </div>
+
+              <div className="mt-6 grid grid-cols-[1fr_.78fr] gap-3">
+                <div className="flex min-h-[310px] flex-col justify-between bg-[var(--forest)] p-5 text-white sm:p-7">
+                  <Wrench size={26} strokeWidth={1.3} />
+
+                  <div>
+                    <p className="font-serif text-3xl leading-tight">
+                      Skilled hands.
+                      <br />
+                      Solid work.
+                    </p>
+                    <p className="mt-3 text-xs leading-5 text-white/70">
+                      A better way to find the people who keep our homes and
+                      businesses moving.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-3">
+                  <div className="flex flex-1 flex-col justify-between bg-[#D7D9C9] p-4">
+                    <span className="text-xs font-semibold text-[var(--forest)]">
+                      01 — DISCOVER
+                    </span>
+                    <Search size={24} className="text-[var(--forest)]" />
+                    <span className="text-sm font-semibold text-[var(--forest)]">
+                      Find the right skill.
+                    </span>
+                  </div>
+
+                  <div className="flex flex-1 flex-col justify-between bg-[#D8B76E] p-4">
+                    <span className="text-xs font-semibold text-[var(--forest)]">
+                      02 — CONNECT
+                    </span>
+                    <MessageCircle
+                      size={24}
+                      className="text-[var(--forest)]"
+                    />
+                    <span className="text-sm font-semibold text-[var(--forest)]">
+                      Get the details clear.
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-3 flex items-center justify-between bg-white px-4 py-3">
+                <span className="text-xs font-semibold text-[var(--forest)]">
+                  Local skill. Professional service.
+                </span>
+                <ArrowUpRight size={16} />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y border-[var(--line)] bg-[#F4F3ED] py-16">
+          <div className="shell">
+            <div className="grid gap-8 md:grid-cols-[.8fr_1.2fr]">
+              <div>
+                <div className="eyebrow">A more confident connection</div>
+                <h2 className="mt-4 max-w-sm text-4xl leading-tight">
+                  Good work deserves a better starting point.
+                </h2>
+              </div>
+
+              <div className="grid gap-6 sm:grid-cols-2">
+                <Feature
+                  icon={<ShieldCheck />}
+                  title="Trust comes first"
+                  text="Clear artisan profiles and verification status help customers make informed choices."
+                />
+                <Feature
+                  icon={<ClipboardList />}
+                  title="Know what comes next"
+                  text="Requests, quotations and approvals follow a clear, structured journey."
+                />
+                <Feature
+                  icon={<MessageCircle />}
+                  title="Keep conversations clear"
+                  text="Connect directly and discuss the details before work begins."
+                />
+                <Feature
+                  icon={<Check />}
+                  title="Built for local work"
+                  text="Discover skills and services in Warri and nearby communities."
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="how-it-works" className="shell py-20">
+          <div className="eyebrow">A straightforward process</div>
+          <h2 className="mt-3 max-w-xl text-4xl">
+            From the first search to a job well done.
+          </h2>
+
+          <div className="mt-12 grid gap-8 md:grid-cols-5">
+            {[
+              ['01', 'Find an artisan', 'Explore skills and local profiles.'],
+              ['02', 'Send a request', 'Explain what needs to get done.'],
+              ['03', 'Review a quote', 'Understand the proposed cost and scope.'],
+              ['04', 'Approve the work', 'Agree on the details before starting.'],
+              ['05', 'Get it done', 'Follow progress through completion.'],
+            ].map(([n, t, d]) => (
+              <div
+                key={n}
+                className="border-t-2 border-[var(--green)] pt-4"
+              >
+                <span className="text-xs font-bold text-[var(--gold)]">
+                  {n}
+                </span>
+                <h3 className="mt-5 text-xl">{t}</h3>
+                <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+                  {d}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section
+          id="for-artisans"
+          className="bg-[var(--forest)] py-16 text-white"
+        >
+          <div className="shell flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
+            <div className="max-w-xl">
+              <div className="text-xs font-bold uppercase tracking-[.16em] text-[#D5B86E]">
+                For skilled professionals
+              </div>
+              <h2 className="mt-4 text-4xl leading-tight text-white">
+                Let good work open the next door.
+              </h2>
+              <p className="mt-4 text-sm leading-7 text-white/70">
+                Build a professional presence, show the work you do and connect
+                with customers looking for your skills.
+              </p>
+            </div>
+
+            <Link
+              href="/artisan-register"
+              className="inline-flex items-center gap-3 rounded-full bg-white px-6 py-4 text-sm font-semibold text-[var(--forest)]"
+            >
+              Create an artisan profile <ArrowRight size={16} />
+            </Link>
+          </div>
+        </section>
+      </main>
+
+      <footer className="shell flex flex-col justify-between gap-3 py-8 text-xs text-[var(--muted)] sm:flex-row">
+        <span>
+          © {new Date().getFullYear()} WarriWorks. Find trusted artisans in
+          Warri.
+        </span>
+        <span>Built for good work, close to home.</span>
+      </footer>
+    </>
+  );
+}
+
+function Feature({
+  icon,
+  title,
+  text,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  text: string;
+}) {
+  return (
+    <div className="flex gap-4">
+      <span className="mt-1 text-[var(--green)]">{icon}</span>
+      <div>
+        <h3 className="text-lg">{title}</h3>
+        <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+          {text}
+        </p>
+      </div>
+    </div>
+  );
+}

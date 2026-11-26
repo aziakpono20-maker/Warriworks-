@@ -1,3 +1,55 @@
 import Link from 'next/link';
 import { ArrowUpRight, Menu } from 'lucide-react';
-export function SiteHeader(){return <header className="sticky top-0 z-30 border-b border-[var(--line)] bg-[color:var(--cream)]/95 backdrop-blur"><div className="shell flex h-[76px] items-center justify-between"><Link href="/" className="flex items-center gap-3"><span className="grid h-10 w-10 place-items-center rounded-xl bg-[var(--forest)] text-sm font-bold text-white">W.</span><span className="text-[21px] font-semibold tracking-[-.06em] text-[var(--forest)]">WarriWorks<span className="text-[var(--green)]">.</span></span></Link><nav className="hidden items-center gap-8 text-[13px] font-medium text-[#465248] md:flex"><Link href="/artisans" className="hover:text-[var(--green)]">Find an Artisan</Link><a href="#how-it-works" className="hover:text-[var(--green)]">How It Works</a><a href="#for-artisans" className="hover:text-[var(--green)]">For Artisans</a></nav><div className="hidden items-center gap-5 md:flex"><Link href="/login" className="text-sm font-semibold text-[var(--forest)]">Sign in</Link><Link href="/register" className="btn-primary !px-5 !py-3">Get started <ArrowUpRight size={15}/></Link></div><Link href="/artisans" className="md:hidden" aria-label="Browse artisans"><Menu/></Link></div></header>}
+
+export function SiteHeader() {
+  return (
+    <header className="sticky top-0 z-30 border-b border-[var(--line)] bg-[color:var(--cream)]/95 backdrop-blur">
+      <div className="shell flex h-[76px] items-center justify-between">
+        <Link href="/" className="flex items-center gap-3">
+          <span className="grid h-10 w-10 place-items-center rounded-xl bg-[var(--forest)] text-sm font-bold text-white">
+            W.
+          </span>
+
+          <span className="text-[21px] font-semibold tracking-[-.06em] text-[var(--forest)]">
+            WarriWorks<span className="text-[var(--green)]">.</span>
+          </span>
+        </Link>
+
+        <nav className="hidden items-center gap-8 text-[13px] font-medium text-[#465248] md:flex">
+          <Link href="/artisans" className="hover:text-[var(--green)]">
+            Find an Artisan
+          </Link>
+
+          <Link href="/#how-it-works" className="hover:text-[var(--green)]">
+            How It Works
+          </Link>
+
+          <Link href="/#for-artisans" className="hover:text-[var(--green)]">
+            For Artisans
+          </Link>
+        </nav>
+
+        <div className="hidden items-center gap-5 md:flex">
+          <Link
+            href="/login"
+            className="text-sm font-semibold text-[var(--forest)]"
+          >
+            Sign in
+          </Link>
+
+          <Link href="/customer-register" className="btn-primary !px-5 !py-3">
+            Get started <ArrowUpRight size={15} />
+          </Link>
+        </div>
+
+        <Link
+          href="/artisans"
+          className="md:hidden"
+          aria-label="Browse artisans"
+        >
+          <Menu />
+        </Link>
+      </div>
+    </header>
+  );
+}
